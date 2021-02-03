@@ -1,39 +1,45 @@
-import { Menu } from 'antd';
-import * as Icon from '@ant-design/icons';
-import React from 'react'
-
+import { Menu } from "antd";
+import * as Icon from "@ant-design/icons";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const { SubMenu } = Menu;
 
 class Nav extends React.Component {
   state = {
-    current: 'mail',
+    current: "mail",
   };
 
-  handleClick = e => {
-    console.log('click ', e);
+  handleClick = (e) => {
+    console.log("click ", e);
     this.setState({ current: e.key });
   };
 
   render() {
     const { current } = this.state;
     return (
-      <Menu style={{ textAlign: 'center'}} onClick={this.handleClick} selectedKeys={[current]} mode="horizontal" theme="dark">
+      <Menu
+        style={{ textAlign: "center" }}
+        onClick={this.handleClick}
+        selectedKeys={[current]}
+        mode="horizontal"
+        theme="light"
+      >
         <Menu.Item key="Home" icon={<Icon.HomeOutlined />}>
-          Home
+          <Link to="/">Home</Link>
         </Menu.Item>
         <Menu.Item key="Portfolio" icon={<Icon.AppstoreOutlined />}>
-          Portfolio
+          <Link to="/portfolio">Portfolio</Link>
         </Menu.Item>
         <Menu.Item key="Cooperation" icon={<Icon.TeamOutlined />}>
-          Cooperation
+          <Link to="/cooperation">Cooperation</Link>
         </Menu.Item>
         <Menu.Item key="Contact" icon={<Icon.MessageOutlined />}>
-          Contact
+          <Link to="/contact">Contact</Link>
         </Menu.Item>
       </Menu>
     );
   }
 }
 
-export default Nav
+export default Nav;

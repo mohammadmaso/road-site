@@ -1,5 +1,3 @@
-
-
 .carousel-demo-wrapper {
   position: relative;
   background: #585858;
@@ -48,12 +46,12 @@
   border-radius: 8px;
   overflow: hidden;
   background: #fff;
-  transition: filter .45s;
+  transition: filter 0.45s;
   margin: auto;
 }
 
 .itemWrapper .rotateLayer .bgAndBlurLayer .contentLayer {
-  transition: opacity .65s;
+  transition: opacity 0.65s;
 }
 
 .img-wrapper {
