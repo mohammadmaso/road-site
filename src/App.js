@@ -3,7 +3,6 @@ import Nav from "./components/nav";
 import SiteFooter from "./components/footer";
 import { Layout } from "antd";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import { AnimatedSwitch } from "react-router-transition";
 import Contact from "./pages/contact";
 import Cooperation from "./pages/cooperation";
 import Portfolio from "./pages/portfolio";
@@ -18,12 +17,7 @@ function App() {
     <Layout style={{ minHeight: "100vh" }}>
       <Nav />
       <Content className="content">
-        <AnimatedSwitch
-          atEnter={{ opacity: 0 }}
-          atLeave={{ opacity: 0 }}
-          atActive={{ opacity: 1 }}
-          className="switch-wrapper"
-        >
+        <Switch>
           <Route path="/portfolio">
             <Portfolio />
           </Route>
@@ -36,7 +30,7 @@ function App() {
           <Route path="/">
             <Landing />
           </Route>
-        </AnimatedSwitch>
+        </Switch>
       </Content>
       <Footer>
         <SiteFooter />
