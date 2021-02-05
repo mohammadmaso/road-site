@@ -1,8 +1,8 @@
 .carousel-demo-wrapper {
   position: relative;
-  background: #585858;
+  background:transparent;
   overflow: hidden;
-  height: 100vh;
+  height: 60vh;
 }
 
 .carousel-demo {
@@ -45,7 +45,7 @@
 .itemWrapper .rotateLayer .bgAndBlurLayer {
   border-radius: 8px;
   overflow: hidden;
-  background: #fff;
+  background: rgb(122, 122, 122);
   transition: filter 0.45s;
   margin: auto;
 }
@@ -58,4 +58,8 @@
   height: 300px;
   background-size: cover;
   background-position: center;
+}
+
+.content {
+  padding: 2rem;
 }
